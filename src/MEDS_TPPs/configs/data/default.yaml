@@ -1,0 +1,5 @@
+description: >-
+  These parameters are used to specify the dataset configuration.
+    TODO: find a way to integrate with MEDS pytorch dataset
+
+max_seq_len: ???

@@ -1,0 +1,8 @@
+do_split_embeddings: False
+categorical_embedding_dim: ???
+numerical_embedding_dim: ???
+static_embedding_mode: "sum_all"
+static_embedding_weight: 0.5
+dynamic_embedding_weight: 0.5
+categorical_embedding_weight: 0.5
+numerical_embedding_weight: 0.5

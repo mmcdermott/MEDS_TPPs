@@ -1,0 +1,4 @@
+defaults:
+  - model: default
+  - data: default
+  - _self_

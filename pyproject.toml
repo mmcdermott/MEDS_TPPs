@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MEDS_TPPs"
+version = "0.0.1"
+authors = [
+  { name="Matthew McDermott", email="mattmcdermott8@gmail.com" },
+]
+description = "Temporal point process generative transformers for MEDS data."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "MEDS_pytorch_dataset@git+https://github.com/mmcdermott/MEDS_pytorch_dataset",
+    "lightning", "transformers"
+]
+
+[project.optional-dependencies]
+dev = ["pre-commit","notebook"]
+tests = ["pytest", "pytest-cov[toml]"]
+
+[project.urls]
+Homepage = "https://github.com/mmcdermott/MEDS_TPPs"
+Issues = "https://github.com/mmcdermott/MEDS_TPPs/issues"

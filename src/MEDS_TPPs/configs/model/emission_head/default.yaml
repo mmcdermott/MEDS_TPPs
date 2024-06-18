@@ -1,0 +1,4 @@
+TTE_generation_layer_type: TimeToEventGenerationHeadType = "exponential",
+TTE_lognormal_generation_num_components: int | None = None,
+mean_log_inter_event_time_min: float | None = None,
+std_log_inter_event_time_min: float | None = None,

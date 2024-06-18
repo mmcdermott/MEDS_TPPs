@@ -1,0 +1,5 @@
+defaults:
+  - input_embedder: default
+  - temporal_position_embedder: default
+  - sequence_model: transformer
+  - emission_head: default

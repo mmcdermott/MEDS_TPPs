@@ -1,0 +1,39 @@
+description: >-
+  These parameters are used to configure a generic transformer model modeled after the TODO architecture.
+  The configuration parameters are:
+    - `head_dim`: The dimension of each attention head.
+    - `num_attention_heads`: The number of attention heads.
+    - The more common parameter `hidden_size` is inferred from `head_dim` and `num_attention_heads` to be
+      their product.
+    - `num_hidden_layers`: The number of transformer layers.
+    - `dropout`: The dropout rate. This is used as a default for all dropout layers, but individual dropouts
+      can be overridden.
+    TODO: Add more parameters as needed.
+
+# User-specified parameters
+head_dim: ???
+num_attention_heads: ???
+num_hidden_layers: ???
+dropout: 0.1
+ffn_size_multiplier: 4
+
+activation_function: "gelu"
+init_std: 0.02
+layer_norm_epsilon: 1e-5
+
+attention_types: null,
+seq_window_size: int = 32,
+
+# For decoding
+use_cache: False
+
+# Inferred parameters
+hidden_size: ${product:${head_dim}, ${num_attention_heads}}
+ffn_size: ${product:${intermediate_size_multiplier}, ${hidden_size}}
+
+max_seq_len: ${..data.max_seq_len}
+
+# We set all the dropouts to the user-specified default for now.
+attention_dropout: ${dropout}
+resid_dropout: ${dropout}
+input_dropout: ${dropout}

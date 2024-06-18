@@ -1,0 +1,6 @@
+description: >-
+  These parameters are used to configure a generic temporal position embedder for a temporal point process
+  transformer model.
+    TODO: Add more parameters as needed.
+
+do_use_learnable_sinusoidal_ATE: False
