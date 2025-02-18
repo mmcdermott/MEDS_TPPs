@@ -31,7 +31,7 @@ use_cache: False
 hidden_size: ${product:${head_dim}, ${num_attention_heads}}
 ffn_size: ${product:${intermediate_size_multiplier}, ${hidden_size}}
 
-max_seq_len: ${..data.max_seq_len}
+max_seq_len: ${oc.select:..data.max_seq_len,???}
 
 # We set all the dropouts to the user-specified default for now.
 attention_dropout: ${dropout}
